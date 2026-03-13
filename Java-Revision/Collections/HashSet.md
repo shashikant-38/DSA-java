@@ -1,19 +1,18 @@
-# HashMap in Java
+# HashSet in Java
 
 ## Definition
 
-HashMap stores **key-value pairs**.
+HashSet stores **unique elements only**.
 
-It is part of the Java Collections Framework.
+It implements the `Set` interface.
 
 ---
 
 ## Features
 
-* Fast lookup
-* Unique keys
-* Allows one null key
-* Unordered
+* No duplicate elements
+* Unordered collection
+* Fast operations
 
 ---
 
@@ -26,33 +25,42 @@ public class Main {
 
     public static void main(String[] args){
 
-        HashMap<Integer,String> map = new HashMap<>();
+        HashSet<Integer> set = new HashSet<>();
 
-        map.put(1,"Apple");
-        map.put(2,"Banana");
+        set.add(10);
+        set.add(20);
+        set.add(10);
 
-        System.out.println(map.get(1));
+        System.out.println(set);
     }
 }
 ```
 
 ---
 
+## Output
+
+```
+[10,20]
+```
+
+Duplicate element is automatically removed.
+
+---
+
 ## Important Methods
 
-| Method        | Purpose        |
-| ------------- | -------------- |
-| put()         | insert data    |
-| get()         | retrieve value |
-| remove()      | delete key     |
-| containsKey() | check key      |
+| Method     | Purpose        |
+| ---------- | -------------- |
+| add()      | insert element |
+| remove()   | delete element |
+| contains() | check element  |
 
 ---
 
 ## Usage in DSA
 
-HashMap is used for:
+HashSet is useful for:
 
-* Two Sum
-* Frequency counting
-* Sliding window problems
+* removing duplicates
+* checking existence in O(1)
