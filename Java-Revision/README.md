@@ -142,13 +142,7 @@ Java-Revision
 
 ---
 
-# Next Step
-
-After completing Java revision, the next step is:
-
-**Start solving Data Structures and Algorithms problems.**
-
-Planned repository structure:
+code repository structure:
 
 ```
 DSA-Problems
@@ -164,9 +158,3 @@ DSA-Problems
 ```
 
 ---
-
-# Author
-
-**Shashikant Patil**
-
-Learning Java, DSA, and Software Development.
