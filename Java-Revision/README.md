@@ -1,4 +1,4 @@
-# Java Revision Notes ☕
+# Java Revision Notes 
 
 This repository contains **structured revision notes for Java fundamentals**.
 The goal is to **revise core Java concepts quickly before practicing Data Structures and Algorithms (DSA).**
