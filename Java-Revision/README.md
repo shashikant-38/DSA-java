@@ -133,14 +133,6 @@ Java-Revision
 
 ---
 
-# Purpose of This Repository
-
-* Revise **Java fundamentals quickly**
-* Prepare for **DSA problem solving**
-* Maintain **organized programming notes**
-* Build a **structured GitHub learning portfolio**
-
----
 
 code repository structure:
 
