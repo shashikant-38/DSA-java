@@ -9,3 +9,10 @@ class Solution {
         arr[arr.length - 1] = first;
     }
 }
+
+
+Idea:
+
+Store first element
+Shift all left
+Put first at end
