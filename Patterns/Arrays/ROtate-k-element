@@ -20,7 +20,7 @@ class Solution {
         }
     }
 }
-
+//time : o(n)
 
 //this is brutforce 
 for opttimal: 1.reverse entire array 2.reverse first k element 3.revrse remaining elements
