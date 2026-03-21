@@ -5,8 +5,8 @@ public class MoveZeros {
 
     //  Brute Force Approach
   // 1.store nonzero in temp
-  // 1count zeros 
-  // 1.append all zero at end
+  // 2count zeros 
+  // 3.append all zero at end
     public static void moveZerosBrute(int[] arr) {
         ArrayList<Integer> temp = new ArrayList<>();
 
@@ -28,27 +28,19 @@ public class MoveZeros {
     }
 
     // 🔹 Optimal Approach (Two Pointer)
-    public static void moveZerosOptimal(int[] arr) {
-        int j = 0;
-
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] != 0) {
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
+   class Solution {
+    public void moveZeroes(int[] nums) {
+        int j = 0; // position for next non-zero
+        
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != 0) {
+                // swap nums[i] and nums[j]
+                int temp = nums[i];
+                nums[i] = nums[j];
+                nums[j] = temp;
+                
                 j++;
             }
         }
-    }
-
-    public static void main(String[] args) {
-        int[] arr1 = {0, 1, 0, 3, 12};
-        int[] arr2 = {0, 1, 0, 3, 12};
-
-        moveZerosBrute(arr1);
-        moveZerosOptimal(arr2);
-
-        System.out.println("Brute Force: " + Arrays.toString(arr1));
-        System.out.println("Optimal: " + Arrays.toString(arr2));
     }
 }
