@@ -1,7 +1,7 @@
 # ArrayList in Java
 
 ## Definition
-
+ 
 ArrayList is a **dynamic array implementation** in Java.
 
 It belongs to the `List` interface in the Java Collections Framework.
