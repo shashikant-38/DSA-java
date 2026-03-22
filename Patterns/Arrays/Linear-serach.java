@@ -13,4 +13,4 @@ class Solution {
   2.compare with target element 
    3.return index 
 
-time : o(n)
+time : o(n) //bcuse if target value find at last it trace whole n input size array ..
