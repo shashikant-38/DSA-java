@@ -13,4 +13,7 @@ class Solution {
     }
 }
 
-//logic expected sum 
+//logic 
+// actual  sum [3,0,1] = 4
+//     expected is 6
+// hence 6-4=2 found
