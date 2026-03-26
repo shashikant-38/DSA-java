@@ -4,7 +4,7 @@
 // 2,Add current element
 // 3.Update answer
 // 4.If sum becomes negative → reset
-
+//Time: O(n)
 
 class Solution {
     public int maxSubArray(int[] nums) {
