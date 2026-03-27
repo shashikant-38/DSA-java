@@ -6,6 +6,7 @@
 // 4.If sum becomes negative → reset
 //Time: O(n)
 
+
 class Solution {
     public int maxSubArray(int[] nums) {
         int sum = 0;
@@ -20,7 +21,6 @@ class Solution {
                 sum = 0;
             }
         }
-
         return max;
     }
 }
