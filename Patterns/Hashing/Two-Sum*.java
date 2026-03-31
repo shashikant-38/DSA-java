@@ -19,3 +19,5 @@ class Solution {
         return new int[]{-1, -1}; // not found
     }
 }
+
+// time complexity: O(n)
