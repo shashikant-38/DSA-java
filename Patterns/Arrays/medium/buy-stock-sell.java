@@ -11,6 +11,8 @@
 // Think:
 // “What is the best price to buy so far?”
 
+track the minimum price seen so far and compute the profit at each step. This gives the maximum profit in O(n) time.
+
 class Solution {
     public int maxProfit(int[] prices) {
         int min = prices[0];
