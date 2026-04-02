@@ -1,3 +1,16 @@
+// ❌ Brute Force (why bad)
+// 👉 Try all pairs:
+// Buy at 7 → sell at 1,5,3,6,4
+// Buy at 1 → sell at 5,3,6,4
+// etc…
+// 👉 Too many checks → O(n²)
+
+// ⚡ Optimal Thinking (IMPORTANT SHIFT)
+// Instead of:
+// “Try all buy-sell pairs”
+// Think:
+// “What is the best price to buy so far?”
+
 class Solution {
     public int maxProfit(int[] prices) {
         int min = prices[0];
