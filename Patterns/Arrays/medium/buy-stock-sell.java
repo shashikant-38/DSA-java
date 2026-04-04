@@ -1,3 +1,5 @@
+imp prblm
+
 // ❌ Brute Force (why bad)
 // 👉 Try all pairs:
 // Buy at 7 → sell at 1,5,3,6,4
