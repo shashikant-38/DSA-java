@@ -1,4 +1,4 @@
-
+//imp for interview
   //  Brute Force Approach
   // 1.store nonzero in temp(other than 0s)
   // 2count zeros 
