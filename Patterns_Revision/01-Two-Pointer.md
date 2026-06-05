@@ -1,71 +1,76 @@
-# Binary Search
+# Two Pointers
 
 ## Definition
 
-Binary Search is used to search an element in a sorted array by repeatedly dividing the search space into two halves.
+Two Pointers is a technique where two indices move through an array or string to solve problems efficiently, usually reducing O(n²) solutions to O(n).
 
 ---
 
 ## Recognition Pattern
 
-Use Binary Search when:
+Use Two Pointers when:
 
 * Array is sorted
-* Need to search an element
-* Need first/last occurrence
-* Need insertion position
-* Need minimum/maximum valid answer
+* Need to find pairs
+* Need to remove duplicates
+* Need to reverse an array/string
+* Need to compare elements from both ends
 
 Keywords:
 
-* Sorted
-* Search
-* Find Position
-* Minimize / Maximize
+* Pair Sum
+* Sorted Array
+* Closest Pair
+* Remove Duplicates
+* Reverse
 
 ---
 
 ## Intuition
 
-Instead of checking every element:
+Instead of checking every pair:
 
-n → n/2 → n/4 → n/8
+```text
+O(n²)
+```
 
-The search space is halved every iteration.
+Use two pointers:
 
-Therefore:
+```text
+left --------> <-------- right
+```
 
-Time Complexity = O(log n)
+Move only the pointer that helps reach the answer.
+
+This avoids unnecessary comparisons.
 
 ---
 
-## Template
+## Basic Template
 
 ```java
-int low = 0;
-int high = nums.length - 1;
+int left = 0;
+int right = nums.length - 1;
 
-while(low <= high){
+while(left < right){
 
-    int mid = low + (high - low) / 2;
-
-    if(nums[mid] == target){
-        return mid;
+    if(condition){
+        return answer;
     }
-    else if(nums[mid] < target){
-        low = mid + 1;
+    else if(needsLargerValue){
+        left++;
     }
     else{
-        high = mid - 1;
+        right--;
     }
 }
-
-return -1;
 ```
+
+---
 
 ## Complexity
 
-Time: O(log n)
+Time: O(n)
 
 Space: O(1)
 
@@ -73,36 +78,73 @@ Space: O(1)
 
 ## Common Variations
 
-### 1. Binary Search
+### 1. Opposite Direction
 
-LeetCode 704
+```text
+left → ← right
+```
 
-### 2. Search Insert Position
+Examples:
 
-LeetCode 35
+* Two Sum II
+* Container With Most Water
+* Valid Palindrome
 
-### 3. First and Last Occurrence
+---
 
-LeetCode 34
+### 2. Same Direction
 
-### 4. Search in Rotated Sorted Array
+```text
+slow → → → 
+fast → → → →
+```
 
-LeetCode 33
+Examples:
 
-### 5. Search in 2D Matrix
+* Remove Duplicates from Sorted Array
+* Move Zeroes
 
-LeetCode 74
+---
+
+## Common Problems
+
+### Easy
+
+* LeetCode 167 – Two Sum II
+* LeetCode 125 – Valid Palindrome
+* LeetCode 344 – Reverse String
+* LeetCode 283 – Move Zeroes
+* LeetCode 26 – Remove Duplicates from Sorted Array
+
+### Medium
+
+* LeetCode 11 – Container With Most Water
+* LeetCode 15 – 3Sum
+* LeetCode 18 – 4Sum
+
+---
+
+## Interview Clues
+
+If you see:
+
+* Sorted Array
+* Pair Search
+* Reverse
+* Remove Duplicates
+* Compare Ends
+
+Think:
+
+```text
+Two Pointers
+```
 
 ---
 
 ## Personal Notes
 
-* Always calculate mid using:
-  int mid = low + (high - low) / 2;
-
-* If target not found:
-
-  * Binary Search → return -1
-  * Search Insert Position → return low
-
-* Whenever search space halves, think O(log n).
+* Sorted array + pair problem = Try Two Pointers first.
+* Opposite ends → left++, right--.
+* Same direction → slow/fast pointers.
+* Often converts O(n²) brute force into O(n).
