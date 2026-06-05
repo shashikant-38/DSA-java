@@ -142,9 +142,3 @@ Two Pointers
 
 ---
 
-## Personal Notes
-
-* Sorted array + pair problem = Try Two Pointers first.
-* Opposite ends → left++, right--.
-* Same direction → slow/fast pointers.
-* Often converts O(n²) brute force into O(n).
